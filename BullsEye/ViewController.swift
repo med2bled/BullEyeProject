@@ -63,13 +63,15 @@ class ViewController: UIViewController {
       
     }
     score+=points
-    let this = self
+    
     let alert = UIAlertController(title: title,
                                   message: message,
                                   preferredStyle: .alert)
-    let action = UIAlertAction(title: "OK", style: .default) { ( action) in
-        this.round+=1
-        this.startNewRound()
+    let action = UIAlertAction(title: "OK", style: .default) { ( action) in 
+      
+      // todo: fix this
+        self.round+=1
+        self.startNewRound()
         }
     alert.addAction(action)
     present(alert, animated: true, completion: nil)
